@@ -31,4 +31,3 @@ if %op% == 1 (
 ) else (
 	echo Disculpe maestro pero no puedo realizar eso
 )
-
