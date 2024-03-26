@@ -4,17 +4,17 @@
     Practica 3 Algoritmo FCFS
 */
 
-#include <stdio.h>
+#include <stdio.h> //Entrada y salida
 #include <pthread.h> //Libreria para crear hilos
 
-#define Tamanio 3
+#define Tamanio 3 //El numero de procesos
 
-typedef struct{
+typedef struct{ //Componentes del proceso
     int id;
     char nom[15];
 } Proceso;
 
-void ejecucion(void *arg){
+void ejecucion(void *arg){ //Funcion de ejecucion del .bat
     Proceso *proceso = (Proceso *)arg;
     system(proceso->nom);
     printf("El proceso con id %d se a ejecutado.\n", proceso->id);
@@ -24,17 +24,17 @@ void ejecucion(void *arg){
 int main(){
     int x;
     pthread_t hilos[Tamanio];
-    Proceso hilo[Tamanio]={
+    Proceso hilo[Tamanio]={//Procesos
         {1, "Cancion1.bat"},
         {2, "Cancion2.bat"},
         {3, "Cancion3.bat"}
     };
 
-    for (int i = 0; i <= Tamanio; i++) {
+    for (int i = 0; i <= Tamanio; i++) {//Creacion de los procesos y asignacion de id por llegada
         if (pthread_create(&hilos[i], NULL, (void *) &ejecucion, (void *) &hilo[i]) != 0) {
             perror("pthread_create");
         }
-        printf("Continuar\n1.-Si\n2.-No");
+        printf("Continuar\n1.-Si\n2.-No"); //Menu de continuacion
         scanf("%d",& x);
         if(x=1){
             printf("\n");
@@ -44,12 +44,12 @@ int main(){
         }
     }
 
-    for (int i = 0; i < Tamanio; i++) {
+    for (int i = 0; i < Tamanio; i++) {//Error al crear el hilo
         if (pthread_join(hilos[i], NULL) != 0) {
             perror("pthread_join");
         }
     }
-
+ 
     printf("Todos los procesos han terminado.\n");
 
     return 0;

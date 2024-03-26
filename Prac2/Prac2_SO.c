@@ -1,8 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/wait.h>
+#include <stdio.h> //Entrada y salida 
+#include <stdlib.h> // Funcionalidades
+#include <unistd.h> //fork
+#include <sys/wait.h> //Exclusiva de Linux para wait()
 
+//El error q logre encontrar fueron las librerias 
 int main (){
     int pid, status;
 
