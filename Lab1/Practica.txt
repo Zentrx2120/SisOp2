@@ -1,0 +1,30 @@
+Practica Memorias Físicas y Virtuales
+
+En EQUIPOS realizar lo siguiente.
+El objetivo de esta practica va a ser realizar un gestor de memoria
+virtual  y física en lenguaje C con ciertas características.
+
+1.- Se va a definir:
+-Memoria física tiene 8 marcos de página disponibles
+-Memoria virtual tiene 16 marcos de página disponibles
+-Área de swapping tiene 8 marcos de página disponibles
+
+2.- se van a realizar dos funciones para la asignación de paginas.
+-asignar_pagina_memoria_fisica() 
+-asignar_pagina_memoria_virtual()
+Además de marcar error en caso de que no se pueda asignar una pagina.
+
+3.- Se va a realizar dos funciones para obtener el contenido de las paginas
+-obtener_contenido_memoria_fisica() 
+-obtener_contenido_memoria_virtual()
+Marcar error en caso de que no se pueda obtener el contenido una pagina.
+
+4.- Una función de swappin:
+Marcar error en caso de no encontrar pagina en el área de swapping.
+
+5.- Hacer todas las asignaciones en el main().
+
+Optimiza la asignación de memoria para minimizar el desperdicio de memoria física y virtual, 
+evitando asignaciones innecesarias y liberando memoria cuando ya no es necesaria.
+
+Explicando que hace cada parte del codigo
