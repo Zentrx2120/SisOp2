@@ -1,0 +1,10 @@
+Relaizar un código para que simula operaciones de escritura en disco y lleva un registro de estas operaciones en un archivo de registro llamado "journal.txt".
+
+Requisitos:
+1.- Definir una estructura JournalRecord que representa un registro en el journal. Este registro tiene un campo llamado operation que almacena la operación realizada.
+2.- Tener una función write_to_journal que escribe una operación en el archivo de registro. Abre el archivo "journal.txt" en modo de añadir y escribe un registro en él.
+3.- Una función write_to_disk que simula una operación de escritura en disco. Imprime un mensaje en la consola indicando que está escribiendo en disco.
+4.- La función write_to_file intenta escribir datos en un archivo llamado "data.txt". Si no puede abrir o escribir en el archivo, imprime un mensaje de error.
+5.- En la función main, primero escribes en el archivo de registro (journal.txt) usando write_to_journal.
+Luego, simulas una operación de escritura en disco llamando a write_to_disk.
+6.- Finalmente, intentas escribir datos en un archivo (data.txt) usando write_to_file.

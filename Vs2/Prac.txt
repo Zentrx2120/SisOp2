@@ -1,0 +1,25 @@
+Practica: 
+Implementación de un sistema de archivos con journaling en C
+
+Objetivo:
+Implementar un programa en C que simule un sistema de archivos con journaling. El sistema debe ser capaz de crear, eliminar y modificar archivos, manteniendo un registro (journal) de todas las operaciones realizadas.
+
+Requisitos:
+El programa debe ser capaz de realizar las siguientes operaciones:
+Crear un archivo.
+Eliminar un archivo.
+Modificar un archivo.
+El journal de cambios debe mostrar todas las operaciones realizadas, incluyendo el número de operación correspondiente.
+
+Instrucciones:
+1.- Implementa las estructuras Archivo, Directorio y Registro para representar archivos, directorios y registros de cambios respectivamente.
+2.- Implementa las funciones crearArchivo(), eliminarArchivo() y modificarArchivo() para realizar las operaciones sobre los archivos.
+3.- Implementa la función agregarRegistro para añadir registros al journal de cambios.
+4.- Implementa la función imprimirJournal para mostrar el journal de cambios, incluyendo el número de operación en cada registro.
+5.- Utiliza el programa principal para realizar las siguientes operaciones y mostrar el journal después de cada operación:
+-Crear archivo(1).
+-Crear archivo(2).
+-Eliminar archivo(2).
+-Crear archivo(3).
+-Modificar archivo(3).
+-Modificar archivo(3).
