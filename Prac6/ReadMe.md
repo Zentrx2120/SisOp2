@@ -1,0 +1,1 @@
+No ejecutar el codigo de la practica 6 en un servidor que no sea personal
